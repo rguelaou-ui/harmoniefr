@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { 
   Home, 
   ChefHat, 
@@ -23,6 +24,7 @@ const services = [
     icon: Thermometer,
     title: "Isolation Thermique & Acoustique",
     description: "Amélioration du confort et de la performance énergétique de votre habitat.",
+    link: "/isolation-thermique-acoustique",
   },
   {
     icon: Zap,
@@ -62,43 +64,58 @@ const ServicesGrid = () => {
 
         {/* Bento Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((service, index) => (
-            <motion.article
-              key={service.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className={`group relative bg-card rounded-lg p-8 shadow-card hover:shadow-elevated transition-all duration-300 border border-border/50 ${
-                service.featured ? "md:col-span-2 lg:col-span-1 lg:row-span-2" : ""
-              }`}
-            >
-              {/* Icon */}
-              <div className={`mb-6 ${service.featured ? "mb-8" : ""}`}>
-                <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-secondary group-hover:bg-accent/10 transition-colors duration-300">
-                  <service.icon 
-                    className="h-6 w-6 text-foreground group-hover:text-accent transition-colors duration-300" 
-                    strokeWidth={1.5} 
-                  />
-                </div>
-              </div>
+          {services.map((service, index) => {
+            const CardWrapper = service.link ? Link : "div";
+            const wrapperProps = service.link ? { to: service.link } : {};
+            return (
+              <motion.article
+                key={service.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className={service.featured ? "md:col-span-2 lg:col-span-1 lg:row-span-2" : ""}
+              >
+                <CardWrapper
+                  {...(wrapperProps as any)}
+                  className={`group relative block h-full bg-card rounded-lg p-8 shadow-card hover:shadow-elevated transition-all duration-300 border border-border/50 ${
+                    service.link ? "cursor-pointer" : ""
+                  }`}
+                >
+                  {/* Icon */}
+                  <div className={`mb-6 ${service.featured ? "mb-8" : ""}`}>
+                    <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-secondary group-hover:bg-accent/10 transition-colors duration-300">
+                      <service.icon 
+                        className="h-6 w-6 text-foreground group-hover:text-accent transition-colors duration-300" 
+                        strokeWidth={1.5} 
+                      />
+                    </div>
+                  </div>
 
-              {/* Content */}
-              <h3 className={`font-serif text-xl mb-3 text-foreground group-hover:text-accent transition-colors duration-300 ${
-                service.featured ? "text-2xl mb-4" : ""
-              }`}>
-                {service.title}
-              </h3>
-              <p className={`text-muted-foreground leading-relaxed ${
-                service.featured ? "text-base" : "text-sm"
-              }`}>
-                {service.description}
-              </p>
+                  {/* Content */}
+                  <h3 className={`font-serif text-xl mb-3 text-foreground group-hover:text-accent transition-colors duration-300 ${
+                    service.featured ? "text-2xl mb-4" : ""
+                  }`}>
+                    {service.title}
+                  </h3>
+                  <p className={`text-muted-foreground leading-relaxed ${
+                    service.featured ? "text-base" : "text-sm"
+                  }`}>
+                    {service.description}
+                  </p>
 
-              {/* Decorative accent line */}
-              <div className="absolute bottom-0 left-8 right-8 h-px bg-gradient-to-r from-transparent via-accent/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            </motion.article>
-          ))}
+                  {service.link && (
+                    <span className="mt-4 inline-flex items-center text-sm text-accent font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      En savoir plus →
+                    </span>
+                  )}
+
+                  {/* Decorative accent line */}
+                  <div className="absolute bottom-0 left-8 right-8 h-px bg-gradient-to-r from-transparent via-accent/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                </CardWrapper>
+              </motion.article>
+            );
+          })}
         </div>
       </div>
     </section>
