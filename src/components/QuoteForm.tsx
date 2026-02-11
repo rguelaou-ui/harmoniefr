@@ -38,7 +38,6 @@ const QuoteForm = () => {
 
   const [formData, setFormData] = useState({
     projectType: "",
-    surface: "",
     timeline: "",
     lastName: "",
     firstName: "",
@@ -46,7 +45,7 @@ const QuoteForm = () => {
     phone: "",
   });
 
-  const totalSteps = 4;
+  const totalSteps = 3;
 
   const updateField = (field: string, value: string) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
@@ -57,10 +56,8 @@ const QuoteForm = () => {
       case 1:
         return formData.projectType !== "";
       case 2:
-        return formData.surface !== "";
-      case 3:
         return formData.timeline !== "";
-      case 4:
+      case 3:
         return (
           formData.lastName !== "" &&
           formData.firstName !== "" &&
@@ -85,7 +82,6 @@ const QuoteForm = () => {
     setStep(1);
     setFormData({
       projectType: "",
-      surface: "",
       timeline: "",
       lastName: "",
       firstName: "",
@@ -196,35 +192,8 @@ const QuoteForm = () => {
                 </motion.div>
               )}
 
-              {/* Step 2: Surface */}
+              {/* Step 2: Timeline */}
               {step === 2 && (
-                <motion.div
-                  key="step2"
-                  variants={stepVariants}
-                  initial="enter"
-                  animate="center"
-                  exit="exit"
-                  transition={{ duration: 0.3 }}
-                >
-                  <Label htmlFor="surface" className="text-lg font-serif mb-4 block text-foreground">
-                    Quelle est la surface estimée (en m²) ?
-                  </Label>
-                  <Input
-                    id="surface"
-                    type="number"
-                    placeholder="Ex: 50"
-                    value={formData.surface}
-                    onChange={(e) => updateField("surface", e.target.value)}
-                    className="h-14 text-base"
-                  />
-                  <p className="text-muted-foreground text-sm mt-3">
-                    Une estimation approximative suffit à ce stade.
-                  </p>
-                </motion.div>
-              )}
-
-              {/* Step 3: Timeline */}
-              {step === 3 && (
                 <motion.div
                   key="step3"
                   variants={stepVariants}
@@ -254,8 +223,8 @@ const QuoteForm = () => {
                 </motion.div>
               )}
 
-              {/* Step 4: Contact Info */}
-              {step === 4 && (
+              {/* Step 3: Contact Info */}
+              {step === 3 && (
                 <motion.div
                   key="step4"
                   variants={stepVariants}
