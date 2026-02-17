@@ -16,6 +16,7 @@ import {
   CheckCircle2,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import Footer from "@/components/Footer";
 
 import cuisineHeroImg from "@/assets/cuisine-hero.jpg";
@@ -316,6 +317,59 @@ const CuisineSalleDeBainPage = () => {
                   index={index}
                 />
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ */}
+        <section className="py-20 bg-secondary">
+          <div className="container mx-auto px-6">
+            <motion.div {...fadeIn} className="text-center mb-16">
+              <span className="text-accent font-medium text-sm tracking-[0.2em] uppercase mb-4 block">
+                Questions fréquentes
+              </span>
+              <h2 className="font-serif text-3xl md:text-4xl text-foreground mb-6">
+                Vos questions sur la rénovation de cuisine et salle de bain
+              </h2>
+            </motion.div>
+            <div className="max-w-3xl mx-auto">
+              <Accordion type="single" collapsible className="space-y-3">
+                {[
+                  {
+                    q: "Combien de temps dure une rénovation complète de cuisine ?",
+                    a: "La durée dépend de l'ampleur des travaux. Une rénovation complète de cuisine (dépose, plomberie, électricité, pose de mobilier et finitions) prend en moyenne 3 à 5 semaines. Un simple rafraîchissement (peinture, crédence, plan de travail) peut être réalisé en 1 à 2 semaines. Harmonie établit un planning détaillé avant le démarrage du chantier.",
+                  },
+                  {
+                    q: "Quel budget prévoir pour une salle de bain complète ?",
+                    a: "Le budget varie selon les matériaux, les équipements et la surface. Pour une salle de bain complète de qualité (douche à l'italienne, carrelage, meuble vasque, robinetterie), comptez entre 8 000 € et 20 000 € en moyenne. Harmonie vous propose un devis détaillé et transparent, sans surprise.",
+                  },
+                  {
+                    q: "Pouvez-vous gérer tous les corps de métier ?",
+                    a: "Oui, c'est notre force. Harmonie coordonne l'ensemble des intervenants : plombier, électricien, carreleur, menuisier, peintre. Vous bénéficiez d'un interlocuteur unique qui supervise la totalité du chantier, garantissant cohérence et respect des délais.",
+                  },
+                  {
+                    q: "Est-il possible de modifier l'agencement de ma cuisine ou salle de bain ?",
+                    a: "Absolument. Nous pouvons déplacer les arrivées d'eau, les évacuations et les circuits électriques pour repenser entièrement l'agencement de votre pièce. Notre bureau d'études conçoit des plans optimisés pour tirer le meilleur parti de votre espace.",
+                  },
+                  {
+                    q: "Quelles garanties proposez-vous sur les travaux ?",
+                    a: "Tous nos travaux sont couverts par la garantie décennale et la garantie de parfait achèvement (1 an). Les équipements installés bénéficient de la garantie fabricant. Nous vous remettons l'ensemble des attestations et certificats à la réception du chantier.",
+                  },
+                  {
+                    q: "Proposez-vous des solutions pour les petits espaces ?",
+                    a: "C'est l'une de nos spécialités. Nous concevons des aménagements sur mesure pour les petites cuisines et salles de bain : meubles suspendus, rangements verticaux, douches sur mesure, mobilier compact. Chaque centimètre est optimisé sans sacrifier le style ni le confort.",
+                  },
+                ].map((faq, i) => (
+                  <AccordionItem key={i} value={`faq-${i}`} className="bg-card rounded-lg border border-border/50 px-6">
+                    <AccordionTrigger className="text-left font-medium text-foreground hover:no-underline">
+                      {faq.q}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground leading-relaxed">
+                      {faq.a}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
             </div>
           </div>
         </section>

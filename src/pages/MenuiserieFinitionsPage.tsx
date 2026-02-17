@@ -14,6 +14,7 @@ import {
   Palette,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import Footer from "@/components/Footer";
 
 import heroImg from "@/assets/menuiserie-hero.jpg";
@@ -427,6 +428,59 @@ const MenuiserieFinitionsPage = () => {
                   ))}
                 </div>
               </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ */}
+        <section className="py-20 bg-secondary">
+          <div className="container mx-auto px-6">
+            <motion.div {...fadeIn} className="text-center mb-16">
+              <span className="text-accent font-medium text-sm tracking-[0.2em] uppercase mb-4 block">
+                Questions fréquentes
+              </span>
+              <h2 className="font-serif text-3xl md:text-4xl text-foreground mb-6">
+                Vos questions sur la menuiserie et les finitions
+              </h2>
+            </motion.div>
+            <div className="max-w-3xl mx-auto">
+              <Accordion type="single" collapsible className="space-y-3">
+                {[
+                  {
+                    q: "Quels types de portes intérieures proposez-vous ?",
+                    a: "Nous installons tous types de portes intérieures : portes pleines (bois massif, MDF), portes vitrées, portes coulissantes à galandage, portes battantes et portes sur pivot. Chaque modèle est disponible dans une large gamme de finitions (laqué, bois naturel, stratifié) pour s'intégrer parfaitement à votre décoration.",
+                  },
+                  {
+                    q: "Combien de temps faut-il pour réaliser des travaux de peinture ?",
+                    a: "Pour un appartement de 60 m², comptez en moyenne 5 à 8 jours ouvrés pour une peinture complète (murs et plafonds), incluant la préparation des supports (enduit, ponçage, sous-couche). Un simple rafraîchissement peut être réalisé en 3 à 5 jours. Le délai dépend de l'état des murs et du nombre de couches nécessaires.",
+                  },
+                  {
+                    q: "Quelle est la différence entre parquet massif et contrecollé ?",
+                    a: "Le parquet massif est constitué d'une seule essence de bois sur toute son épaisseur (12 à 23 mm). Il est très durable et peut être poncé plusieurs fois. Le parquet contrecollé est composé d'une couche noble en bois (2,5 à 6 mm) collée sur un support en contreplaqué. Il offre un rendu identique au massif, une meilleure stabilité dimensionnelle et un coût plus accessible.",
+                  },
+                  {
+                    q: "Proposez-vous des rangements et placards sur mesure ?",
+                    a: "Oui, c'est l'une de nos spécialités. Nous concevons et réalisons des placards intégrés, dressings, bibliothèques et rangements entièrement sur mesure. Chaque projet est adapté à vos dimensions exactes, vos besoins de rangement et votre style décoratif. Les matériaux et finitions sont personnalisables.",
+                  },
+                  {
+                    q: "Quels types de peintures utilisez-vous ?",
+                    a: "Nous utilisons exclusivement des peintures professionnelles de grandes marques, à faible émission de COV (composés organiques volatils) pour la santé et l'environnement. Nous proposons des finitions mat, satiné et laqué, ainsi que des peintures décoratives (effet béton, stuc vénitien, patine). Chaque produit est choisi pour sa durabilité et son rendu.",
+                  },
+                  {
+                    q: "Peut-on poser du parquet dans une salle de bain ou une cuisine ?",
+                    a: "Oui, à condition de choisir les bons matériaux. Nous recommandons le parquet massif en bois exotique (teck, iroko) naturellement résistant à l'humidité, ou un parquet contrecollé avec traitement hydrofuge. Une pose collée avec joints étanches est indispensable. Alternativement, nous proposons des revêtements effet bois (grès cérame imitation parquet) offrant un rendu similaire avec une résistance totale à l'eau.",
+                  },
+                ].map((faq, i) => (
+                  <AccordionItem key={i} value={`faq-${i}`} className="bg-card rounded-lg border border-border/50 px-6">
+                    <AccordionTrigger className="text-left font-medium text-foreground hover:no-underline">
+                      {faq.q}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground leading-relaxed">
+                      {faq.a}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
             </div>
           </div>
         </section>
