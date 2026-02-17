@@ -9,16 +9,16 @@ import {
 
 const services = [
   {
-    icon: ChefHat,
-    title: "Cuisines & Salles de Bain",
-    description: "Conception et réalisation d'espaces fonctionnels et esthétiques, adaptés à votre mode de vie.",
-    link: "/cuisines-salles-de-bain",
-  },
-  {
     icon: Thermometer,
     title: "Isolation Thermique & Acoustique",
     description: "Amélioration du confort et de la performance énergétique de votre habitat.",
     link: "/isolation-thermique-acoustique",
+  },
+  {
+    icon: ChefHat,
+    title: "Cuisines & Salles de Bain",
+    description: "Conception et réalisation d'espaces fonctionnels et esthétiques, adaptés à votre mode de vie.",
+    link: "/cuisines-salles-de-bain",
   },
   {
     icon: Zap,
