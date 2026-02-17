@@ -32,6 +32,7 @@ const services = [
     icon: Zap,
     title: "Électricité & Plomberie",
     description: "Mise aux normes et installation de réseaux fiables, sécurisés et durables.",
+    link: "/electricite-plomberie",
   },
   {
     icon: Hammer,
