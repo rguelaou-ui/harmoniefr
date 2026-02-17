@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { 
-  Home, 
   ChefHat, 
   Thermometer, 
   Zap, 
@@ -9,13 +8,6 @@ import {
 } from "lucide-react";
 
 const services = [
-  {
-    icon: Home,
-    title: "Rénovation Complète",
-    description: "Transformation intégrale de vos espaces, du sol au plafond, avec une coordination parfaite de tous les corps de métier.",
-    featured: true,
-    link: "/renovation-complete",
-  },
   {
     icon: ChefHat,
     title: "Cuisines & Salles de Bain",
@@ -78,7 +70,7 @@ const ServicesGrid = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className={service.featured ? "md:col-span-2 lg:col-span-1 lg:row-span-2" : ""}
+                className=""
               >
                 <CardWrapper
                   {...(wrapperProps as any)}
@@ -87,7 +79,7 @@ const ServicesGrid = () => {
                   }`}
                 >
                   {/* Icon */}
-                  <div className={`mb-6 ${service.featured ? "mb-8" : ""}`}>
+                  <div className="mb-6">
                     <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-secondary group-hover:bg-accent/10 transition-colors duration-300">
                       <service.icon 
                         className="h-6 w-6 text-foreground group-hover:text-accent transition-colors duration-300" 
@@ -97,14 +89,10 @@ const ServicesGrid = () => {
                   </div>
 
                   {/* Content */}
-                  <h3 className={`font-serif text-xl mb-3 text-foreground group-hover:text-accent transition-colors duration-300 ${
-                    service.featured ? "text-2xl mb-4" : ""
-                  }`}>
+                  <h3 className="font-serif text-xl mb-3 text-foreground group-hover:text-accent transition-colors duration-300">
                     {service.title}
                   </h3>
-                  <p className={`text-muted-foreground leading-relaxed ${
-                    service.featured ? "text-base" : "text-sm"
-                  }`}>
+                  <p className="text-muted-foreground leading-relaxed text-sm">
                     {service.description}
                   </p>
 
