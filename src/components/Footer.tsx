@@ -31,28 +31,28 @@ const Footer = () => {
             <ul className="space-y-4">
               <li>
                 <a 
-                  href="tel:+33100000000" 
+                  href="tel:+33695847700" 
                   className="flex items-center gap-3 text-background/70 hover:text-accent transition-colors"
                 >
                   <Phone className="h-4 w-4" strokeWidth={1.5} />
-                  01 00 00 00 00
+                  06 95 84 77 00
                 </a>
               </li>
               <li>
                 <a 
-                  href="mailto:contact@harmonie.fr" 
+                  href="mailto:harmonie93300@gmail.com" 
                   className="flex items-center gap-3 text-background/70 hover:text-accent transition-colors"
                 >
                   <Mail className="h-4 w-4" strokeWidth={1.5} />
-                  contact@harmonie.fr
+                  harmonie93300@gmail.com
                 </a>
               </li>
               <li>
                 <div className="flex items-start gap-3 text-background/70">
                   <MapPin className="h-4 w-4 mt-1 flex-shrink-0" strokeWidth={1.5} />
                   <span>
-                    123 Avenue des Champs-Élysées<br />
-                    75008 Paris
+                    7 Rue Chapon<br />
+                    93300 Aubervilliers
                   </span>
                 </div>
               </li>
