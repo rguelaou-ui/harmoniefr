@@ -93,7 +93,7 @@ const Footer = () => {
             © {currentYear} Harmonie. Tous droits réservés.
           </p>
           <div className="flex items-center gap-6 text-sm text-background/50">
-            <a href="#" className="hover:text-background transition-colors">
+            <a href="/mentions-legales" className="hover:text-background transition-colors">
               Mentions légales
             </a>
             <a href="#" className="hover:text-background transition-colors">
