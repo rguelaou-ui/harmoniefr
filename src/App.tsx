@@ -8,6 +8,7 @@ import IsolationPage from "./pages/IsolationPage";
 import RenovationPage from "./pages/RenovationPage";
 import CuisineSalleDeBainPage from "./pages/CuisineSalleDeBainPage";
 import ElectricitePlomberiePage from "./pages/ElectricitePlomberiePage";
+import MenuiserieFinitionsPage from "./pages/MenuiserieFinitionsPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,6 +25,7 @@ const App = () => (
           <Route path="/renovation-complete" element={<RenovationPage />} />
           <Route path="/cuisines-salles-de-bain" element={<CuisineSalleDeBainPage />} />
           <Route path="/electricite-plomberie" element={<ElectricitePlomberiePage />} />
+          <Route path="/menuiserie-finitions" element={<MenuiserieFinitionsPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
