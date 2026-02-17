@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
+import logoHarmonie from "@/assets/logo-harmonie.png";
 
 const PolitiqueConfidentialitePage = () => {
   return (
@@ -8,9 +9,10 @@ const PolitiqueConfidentialitePage = () => {
       {/* Header */}
       <header className="border-b border-border">
         <div className="container mx-auto px-6 py-6 flex items-center justify-between">
-          <Link to="/" className="font-serif text-2xl text-foreground">
-            Harmonie
-          </Link>
+          <Link to="/" className="flex items-center gap-2">
+              <img src={logoHarmonie} alt="Harmonie" className="h-9 w-9 rounded-full object-cover" />
+              <span className="font-serif text-2xl text-foreground">Harmonie</span>
+            </Link>
           <Link
             to="/"
             className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
