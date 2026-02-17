@@ -10,6 +10,7 @@ import CuisineSalleDeBainPage from "./pages/CuisineSalleDeBainPage";
 import ElectricitePlomberiePage from "./pages/ElectricitePlomberiePage";
 import MenuiserieFinitionsPage from "./pages/MenuiserieFinitionsPage";
 import MentionsLegalesPage from "./pages/MentionsLegalesPage";
+import PolitiqueConfidentialitePage from "./pages/PolitiqueConfidentialitePage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -28,6 +29,7 @@ const App = () => (
           <Route path="/electricite-plomberie" element={<ElectricitePlomberiePage />} />
           <Route path="/menuiserie-finitions" element={<MenuiserieFinitionsPage />} />
           <Route path="/mentions-legales" element={<MentionsLegalesPage />} />
+          <Route path="/politique-de-confidentialite" element={<PolitiqueConfidentialitePage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
