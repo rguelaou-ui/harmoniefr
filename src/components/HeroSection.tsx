@@ -43,10 +43,10 @@ const HeroSection = () => {
 
           {/* Main Title */}
           <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-primary-foreground leading-tight mb-6">
-            L'exigence du détail,{" "}
+            Harmonie, la maîtrise complète de vos travaux,{" "}
             <span className="block mt-2">
-              la sérénité d'un{" "}
-              <span className="text-accent">interlocuteur unique</span>.
+              l'exigence d'une{" "}
+              <span className="text-accent">finition irréprochable</span>.
             </span>
           </h1>
 
