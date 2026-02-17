@@ -14,6 +14,7 @@ const services = [
     title: "Rénovation Complète",
     description: "Transformation intégrale de vos espaces, du sol au plafond, avec une coordination parfaite de tous les corps de métier.",
     featured: true,
+    link: "/renovation-complete",
   },
   {
     icon: ChefHat,
