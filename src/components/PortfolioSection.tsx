@@ -94,18 +94,6 @@ const PortfolioSection = () => {
           ))}
         </div>
 
-        {/* CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="text-center mt-12"
-        >
-          <Button variant="outline" size="lg">
-            Voir tous nos projets
-          </Button>
-        </motion.div>
       </div>
     </section>
   );
