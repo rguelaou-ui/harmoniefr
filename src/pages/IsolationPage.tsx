@@ -381,57 +381,115 @@ const IsolationPage = () => {
           </div>
         </section>
 
-        {/* Principe masse-ressort-masse */}
+        {/* Notre méthode d'isolation acoustique haute performance */}
         <section className="py-20 bg-background">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto">
               <motion.div {...fadeIn} className="text-center mb-12">
                 <span className="text-accent font-medium text-sm tracking-[0.2em] uppercase mb-4 block">
-                  Technique fondamentale
+                  Notre savoir-faire
                 </span>
                 <h2 className="font-serif text-3xl md:text-4xl text-foreground mb-6">
-                  Le principe masse-ressort-masse en isolation acoustique
+                  Notre méthode d'isolation acoustique haute performance
                 </h2>
+                <p className="text-muted-foreground max-w-3xl mx-auto text-lg leading-relaxed">
+                  La performance d'une <strong>isolation phonique</strong> repose avant tout sur une mise en œuvre
+                  rigoureuse et sur le principe de <strong>désolidarisation des parois</strong>. En supprimant les
+                  liaisons rigides entre les structures, nous limitons efficacement la transmission des vibrations
+                  et des bruits, garantissant un résultat acoustique optimal et durable.
+                </p>
               </motion.div>
 
-              <motion.div {...fadeIn} className="bg-card rounded-lg p-8 shadow-card border border-border/50 mb-12">
-                <p className="text-muted-foreground leading-relaxed mb-6">
-                  Le système <strong>masse-ressort-masse</strong> est le principe fondamental de toute
-                  <strong> isolation phonique</strong> efficace. Il se compose de trois couches :
-                </p>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
-                  {[
-                    {
-                      step: "1",
-                      title: "Masse 1 (Paroi existante)",
-                      desc: "Mur, plafond ou plancher d'origine. Plus la masse est importante, meilleur est le blocage des basses fréquences.",
-                    },
-                    {
-                      step: "2",
-                      title: "Ressort (Isolant souple)",
-                      desc: "Laine minérale, laine de roche ou matériau absorbant. Il absorbe l'énergie sonore par friction des fibres.",
-                    },
-                    {
-                      step: "3",
-                      title: "Masse 2 (Parement)",
-                      desc: "Plaque de plâtre (BA13 ou BA18), idéalement sur ossature désolidarisée pour éviter les ponts phoniques.",
-                    },
-                  ].map((item) => (
-                    <div key={item.step} className="text-center">
-                      <div className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-accent text-accent-foreground font-bold mb-3">
+              <motion.div {...fadeIn} className="space-y-6">
+                {[
+                  {
+                    step: "1",
+                    title: "Désolidarisation par ossature",
+                    description:
+                      "La première étape consiste à créer une ossature métallique totalement désolidarisée de la paroi existante. Cette technique constitue la base de toute isolation acoustique performante.",
+                    points: [
+                      "Réduction de la transmission des vibrations entre les structures",
+                      "Suppression des ponts phoniques, principale cause de perte d'efficacité",
+                      "Création d'une base optimale pour recevoir le complexe acoustique multicouche",
+                    ],
+                  },
+                  {
+                    step: "2",
+                    title: "Plaque Fermacell",
+                    description:
+                      "La plaque Fermacell est intégrée comme première couche de masse dans notre système. Ce matériau de haute densité apporte une contribution essentielle à la performance globale.",
+                    points: [
+                      "Matériau dense et rigide, supérieur aux plaques standard",
+                      "Excellente performance mécanique et acoustique",
+                      "Première masse lourde du système, bloquant les basses fréquences",
+                      "Amélioration significative de l'affaiblissement acoustique (Rw)",
+                    ],
+                  },
+                  {
+                    step: "3",
+                    title: "Plaque phonique",
+                    description:
+                      "Une plaque phonique spécialement conçue pour l'isolation acoustique vient renforcer le complexe. Elle complète le dispositif en ajoutant une couche d'atténuation supplémentaire.",
+                    points: [
+                      "Formulée spécifiquement pour l'isolation acoustique haute performance",
+                      "Renforce la capacité d'absorption et d'atténuation sonore",
+                      "Complète la masse et la performance globale du complexe",
+                    ],
+                  },
+                  {
+                    step: "4",
+                    title: "Membrane acoustique Techsound",
+                    description:
+                      "La membrane Techsound est l'élément clé de notre système. Sa très haute densité en fait une masse lourde acoustique redoutablement efficace contre les bruits aériens.",
+                    points: [
+                      "Membrane à très haute densité massique",
+                      "Fonction de masse lourde acoustique dans le complexe",
+                      "Bloque efficacement la transmission des bruits aériens",
+                      "Élément clé de la performance phonique globale du système",
+                    ],
+                  },
+                  {
+                    step: "5",
+                    title: "Plaque BA13 de finition",
+                    description:
+                      "La plaque de plâtre BA13 vient finaliser le complexe acoustique. Elle assure une finition esthétique irréprochable tout en protégeant l'ensemble du système.",
+                    points: [
+                      "Assure la finition esthétique du mur ou du plafond",
+                      "Protection durable du complexe acoustique sous-jacent",
+                      "Rendu propre, lisse et prêt à peindre ou à enduire",
+                    ],
+                  },
+                ].map((item) => (
+                  <div
+                    key={item.step}
+                    className="bg-card rounded-lg p-6 md:p-8 shadow-card border border-border/50"
+                  >
+                    <div className="flex items-start gap-5">
+                      <div className="flex-shrink-0 inline-flex items-center justify-center w-11 h-11 rounded-full bg-accent text-accent-foreground font-bold text-lg">
                         {item.step}
                       </div>
-                      <h4 className="font-serif text-foreground mb-2">{item.title}</h4>
-                      <p className="text-sm text-muted-foreground">{item.desc}</p>
+                      <div className="flex-1">
+                        <h3 className="font-serif text-xl text-foreground mb-2">
+                          Étape {item.step} — {item.title}
+                        </h3>
+                        <p className="text-muted-foreground leading-relaxed mb-4">
+                          {item.description}
+                        </p>
+                        <ul className="space-y-2">
+                          {item.points.map((point) => (
+                            <li
+                              key={point}
+                              className="flex items-start gap-2 text-sm text-muted-foreground"
+                            >
+                              <CheckCircle2 className="h-4 w-4 text-accent mt-0.5 flex-shrink-0" />
+                              {point}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
                     </div>
-                  ))}
-                </div>
-                <p className="text-sm text-muted-foreground bg-accent/5 rounded p-4">
-                  <strong>Important :</strong> La <strong>désolidarisation</strong> entre les deux masses est cruciale
-                  dans les travaux d'isolation acoustique. Tout contact rigide crée un <strong>pont phonique</strong>
-                  qui annule l'efficacité du système. C'est pourquoi nous utilisons des rails résilients,
-                  des suspentes anti-vibratiles et des bandes de désolidarisation périphériques.
-                </p>
+                  </div>
+                ))}
               </motion.div>
             </div>
           </div>
