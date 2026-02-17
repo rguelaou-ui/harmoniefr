@@ -1,4 +1,5 @@
 import { Phone, Mail, MapPin } from "lucide-react";
+import logoHarmonie from "@/assets/logo-harmonie.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -9,9 +10,10 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <h3 className="font-serif text-2xl text-background mb-4">
-              Harmonie
-            </h3>
+            <div className="flex items-center gap-3 mb-4">
+              <img src={logoHarmonie} alt="Harmonie" className="h-10 w-10 rounded-full object-cover" />
+              <h3 className="font-serif text-2xl text-background">Harmonie</h3>
+            </div>
             <p className="text-background/70 max-w-md leading-relaxed mb-6">
               Entreprise générale de travaux spécialisée dans la rénovation intérieure 
               haut de gamme. Un interlocuteur unique pour tous vos projets.

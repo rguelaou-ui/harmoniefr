@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ChevronDown } from "lucide-react";
 import heroImage from "@/assets/hero-interior.jpg";
+import logoHarmonie from "@/assets/logo-harmonie.png";
 
 const HeroSection = () => {
   const scrollToQuote = () => {
@@ -37,9 +38,7 @@ const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mb-8"
           >
-            <span className="text-accent font-serif text-lg tracking-[0.3em] uppercase">
-              Harmonie
-            </span>
+            <img src={logoHarmonie} alt="Harmonie" className="h-20 w-20 mx-auto rounded-full object-cover" />
           </motion.div>
 
           {/* Main Title */}
