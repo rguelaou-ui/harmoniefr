@@ -38,6 +38,7 @@ const services = [
     icon: Hammer,
     title: "Menuiserie & Finitions",
     description: "Travaux de finition soignés pour une qualité visible jusque dans les moindres détails.",
+    link: "/menuiserie-finitions",
   },
 ];
 
