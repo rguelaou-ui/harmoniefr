@@ -20,6 +20,7 @@ const services = [
     icon: ChefHat,
     title: "Cuisines & Salles de Bain",
     description: "Conception et réalisation d'espaces fonctionnels et esthétiques, adaptés à votre mode de vie.",
+    link: "/cuisines-salles-de-bain",
   },
   {
     icon: Thermometer,
