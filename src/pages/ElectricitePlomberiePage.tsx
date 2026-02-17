@@ -16,6 +16,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import Footer from "@/components/Footer";
 
 import heroImg from "@/assets/electricite-hero.jpg";
@@ -442,6 +443,59 @@ const ElectricitePlomberiePage = () => {
                   ))}
                 </div>
               </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ */}
+        <section className="py-20 bg-secondary">
+          <div className="container mx-auto px-6">
+            <motion.div {...fadeIn} className="text-center mb-16">
+              <span className="text-accent font-medium text-sm tracking-[0.2em] uppercase mb-4 block">
+                Questions fréquentes
+              </span>
+              <h2 className="font-serif text-3xl md:text-4xl text-foreground mb-6">
+                Vos questions sur l'électricité, la plomberie et la climatisation
+              </h2>
+            </motion.div>
+            <div className="max-w-3xl mx-auto">
+              <Accordion type="single" collapsible className="space-y-3">
+                {[
+                  {
+                    q: "Comment savoir si mon installation électrique doit être mise aux normes ?",
+                    a: "Plusieurs signes doivent vous alerter : disjonctions fréquentes, prises ou interrupteurs qui chauffent, absence de disjoncteur différentiel 30 mA, fils apparents ou installation de plus de 25 ans. Un diagnostic électrique réalisé par nos techniciens permet d'identifier précisément les non-conformités et de prioriser les travaux de mise en sécurité selon la norme NF C 15-100.",
+                  },
+                  {
+                    q: "Quels sont les délais pour une rénovation complète de plomberie ?",
+                    a: "Pour un appartement standard, la rénovation complète du réseau de plomberie (alimentation et évacuation) prend entre 3 et 7 jours ouvrés. Ce délai peut varier selon la complexité du réseau, l'accessibilité des canalisations et les finitions souhaitées. Harmonie établit un planning précis avant le démarrage du chantier.",
+                  },
+                  {
+                    q: "Quelle est la différence entre une PAC air/air et air/eau ?",
+                    a: "La pompe à chaleur air/air capte les calories de l'air extérieur pour chauffer (ou rafraîchir) l'air intérieur via des unités murales. La PAC air/eau capte également les calories de l'air mais les transfère à un circuit d'eau pour alimenter des radiateurs ou un plancher chauffant. La PAC air/eau est plus polyvalente (chauffage, eau chaude sanitaire) mais nécessite un réseau hydraulique existant.",
+                  },
+                  {
+                    q: "Vos installations sont-elles éligibles aux aides de l'État ?",
+                    a: "Oui, nos installations de pompes à chaleur et certains travaux d'amélioration énergétique sont éligibles à MaPrimeRénov', aux CEE (Certificats d'Économies d'Énergie), à la TVA réduite à 5,5 % et à l'éco-prêt à taux zéro. Harmonie est certifiée RGE, condition indispensable pour bénéficier de ces aides. Nous vous accompagnons dans vos démarches administratives.",
+                  },
+                  {
+                    q: "À quelle fréquence faut-il entretenir une climatisation ou une PAC ?",
+                    a: "L'entretien annuel est obligatoire pour les systèmes contenant plus de 2 kg de fluide frigorigène. Il comprend le nettoyage des filtres, la vérification du fluide frigorigène, le contrôle des performances et l'inspection générale de l'installation. Un entretien régulier garantit des performances optimales et prolonge la durée de vie de votre équipement.",
+                  },
+                  {
+                    q: "Intervenez-vous en urgence pour les pannes ?",
+                    a: "Oui, nous proposons un service de dépannage rapide pour les urgences électriques et de plomberie : fuite d'eau, coupure de courant, panne de chauffe-eau, disjonctions intempestives. Nos techniciens interviennent dans les meilleurs délais pour sécuriser votre installation et effectuer les réparations nécessaires.",
+                  },
+                ].map((faq, i) => (
+                  <AccordionItem key={i} value={`faq-${i}`} className="bg-card rounded-lg border border-border/50 px-6">
+                    <AccordionTrigger className="text-left font-medium text-foreground hover:no-underline">
+                      {faq.q}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground leading-relaxed">
+                      {faq.a}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
             </div>
           </div>
         </section>
