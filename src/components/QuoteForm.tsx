@@ -19,6 +19,7 @@ const projectTypes = [
   "Cuisine",
   "Salle de bain",
   "Isolation thermique",
+  "Isolation phonique",
   "Électricité / Plomberie",
   "Menuiserie / Finitions",
   "Autre",
