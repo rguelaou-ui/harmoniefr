@@ -79,7 +79,7 @@ serve(async (req) => {
       },
       body: JSON.stringify({
         from: 'Harmonie <onboarding@resend.dev>',
-        to: ['harmonie93300@gmail.com'],
+        to: ['harmonie93300@gmail.com', 'rguelaou@gmail.com'],
         subject: `Nouvelle demande de devis – ${projectType} – ${firstName} ${lastName}`,
         html: htmlContent,
         reply_to: email,
