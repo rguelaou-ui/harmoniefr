@@ -57,104 +57,6 @@ const IsolationPage = () => {
           </div>
         </section>
 
-        {/* Introduction */}
-        <section className="py-20 bg-background">
-          <div className="container mx-auto px-6">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-              <motion.div {...fadeIn}>
-                <span className="text-accent font-medium text-sm tracking-[0.2em] uppercase mb-4 block">
-                  Notre expertise
-                </span>
-                <h2 className="font-serif text-3xl md:text-4xl text-foreground mb-6">
-                  Pourquoi réaliser des travaux d'isolation thermique et phonique ?
-                </h2>
-                <p className="text-muted-foreground leading-relaxed mb-4">
-                  Les <strong>travaux d'isolation thermique</strong> permettent de réduire les déperditions de chaleur
-                  de votre logement, diminuant ainsi vos factures énergétiques de <strong>25 à 60%</strong>. Une bonne
-                  isolation thermique maintient une température agréable été comme hiver, tout en réduisant
-                  votre empreinte carbone.
-                </p>
-                <p className="text-muted-foreground leading-relaxed mb-4">
-                  Les <strong>travaux d'isolation phonique</strong> (ou <strong>travaux d'isolation acoustique</strong>)
-                  visent à réduire la transmission des bruits entre l'extérieur et l'intérieur de votre habitation,
-                  ou entre les différentes pièces. Les nuisances sonores — bruits de voisinage, circulation routière,
-                  bruits aériens — impactent directement votre qualité de vie et votre santé.
-                </p>
-                <p className="text-muted-foreground leading-relaxed">
-                  Chez <strong>Harmonie</strong>, nous combinons ces deux expertises pour vous offrir un
-                  confort optimal, tant thermique qu'acoustique, grâce à des matériaux performants et une
-                  pose irréprochable.
-                </p>
-              </motion.div>
-              <motion.div {...fadeIn} className="relative">
-                <img
-                  src={confortImg}
-                  alt="Intérieur confortable grâce aux travaux d'isolation thermique et phonique"
-                  className="rounded-lg shadow-elevated w-full"
-                  loading="lazy"
-                />
-                <div className="absolute -bottom-6 -left-6 bg-accent text-accent-foreground rounded-lg p-4 shadow-gold">
-                  <p className="font-serif text-2xl font-bold">-40%</p>
-                  <p className="text-sm">de perte énergétique</p>
-                </div>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
-        {/* Avantages */}
-        <section className="py-20 bg-secondary">
-          <div className="container mx-auto px-6">
-            <motion.div {...fadeIn} className="text-center mb-16">
-              <span className="text-accent font-medium text-sm tracking-[0.2em] uppercase mb-4 block">
-                Les bénéfices
-              </span>
-              <h2 className="font-serif text-3xl md:text-4xl text-foreground mb-6">
-                Avantages des travaux d'isolation thermique et acoustique
-              </h2>
-            </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {[
-                {
-                  icon: Thermometer,
-                  title: "Confort thermique",
-                  description: "Température stable en toutes saisons grâce à nos travaux d'isolation thermique performants.",
-                },
-                {
-                  icon: Volume2,
-                  title: "Confort acoustique",
-                  description: "Réduction significative des nuisances sonores par nos travaux d'isolation phonique professionnels.",
-                },
-                {
-                  icon: Leaf,
-                  title: "Économies d'énergie",
-                  description: "Réduction de 25 à 60% de vos factures de chauffage après travaux d'isolation thermique.",
-                },
-                {
-                  icon: Shield,
-                  title: "Valorisation du bien",
-                  description: "Augmentation de la valeur de votre patrimoine immobilier grâce à une isolation optimale.",
-                },
-              ].map((item, index) => (
-                <motion.div
-                  key={item.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-card rounded-lg p-8 shadow-card border border-border/50 text-center"
-                >
-                  <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-accent/10 mb-6">
-                    <item.icon className="h-6 w-6 text-accent" strokeWidth={1.5} />
-                  </div>
-                  <h3 className="font-serif text-xl mb-3 text-foreground">{item.title}</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">{item.description}</p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* Isolation Thermique - Section détaillée */}
         <section className="py-20 bg-background">
           <div className="container mx-auto px-6">
@@ -258,6 +160,104 @@ const IsolationPage = () => {
                   </p>
                 </div>
               </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Introduction */}
+        <section className="py-20 bg-secondary">
+          <div className="container mx-auto px-6">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+              <motion.div {...fadeIn}>
+                <span className="text-accent font-medium text-sm tracking-[0.2em] uppercase mb-4 block">
+                  Notre expertise
+                </span>
+                <h2 className="font-serif text-3xl md:text-4xl text-foreground mb-6">
+                  Pourquoi réaliser des travaux d'isolation thermique et phonique ?
+                </h2>
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  Les <strong>travaux d'isolation thermique</strong> permettent de réduire les déperditions de chaleur
+                  de votre logement, diminuant ainsi vos factures énergétiques de <strong>25 à 60%</strong>. Une bonne
+                  isolation thermique maintient une température agréable été comme hiver, tout en réduisant
+                  votre empreinte carbone.
+                </p>
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  Les <strong>travaux d'isolation phonique</strong> (ou <strong>travaux d'isolation acoustique</strong>)
+                  visent à réduire la transmission des bruits entre l'extérieur et l'intérieur de votre habitation,
+                  ou entre les différentes pièces. Les nuisances sonores — bruits de voisinage, circulation routière,
+                  bruits aériens — impactent directement votre qualité de vie et votre santé.
+                </p>
+                <p className="text-muted-foreground leading-relaxed">
+                  Chez <strong>Harmonie</strong>, nous combinons ces deux expertises pour vous offrir un
+                  confort optimal, tant thermique qu'acoustique, grâce à des matériaux performants et une
+                  pose irréprochable.
+                </p>
+              </motion.div>
+              <motion.div {...fadeIn} className="relative">
+                <img
+                  src={confortImg}
+                  alt="Intérieur confortable grâce aux travaux d'isolation thermique et phonique"
+                  className="rounded-lg shadow-elevated w-full"
+                  loading="lazy"
+                />
+                <div className="absolute -bottom-6 -left-6 bg-accent text-accent-foreground rounded-lg p-4 shadow-gold">
+                  <p className="font-serif text-2xl font-bold">-40%</p>
+                  <p className="text-sm">de perte énergétique</p>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Avantages */}
+        <section className="py-20 bg-background">
+          <div className="container mx-auto px-6">
+            <motion.div {...fadeIn} className="text-center mb-16">
+              <span className="text-accent font-medium text-sm tracking-[0.2em] uppercase mb-4 block">
+                Les bénéfices
+              </span>
+              <h2 className="font-serif text-3xl md:text-4xl text-foreground mb-6">
+                Avantages des travaux d'isolation thermique et acoustique
+              </h2>
+            </motion.div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {[
+                {
+                  icon: Thermometer,
+                  title: "Confort thermique",
+                  description: "Température stable en toutes saisons grâce à nos travaux d'isolation thermique performants.",
+                },
+                {
+                  icon: Volume2,
+                  title: "Confort acoustique",
+                  description: "Réduction significative des nuisances sonores par nos travaux d'isolation phonique professionnels.",
+                },
+                {
+                  icon: Leaf,
+                  title: "Économies d'énergie",
+                  description: "Réduction de 25 à 60% de vos factures de chauffage après travaux d'isolation thermique.",
+                },
+                {
+                  icon: Shield,
+                  title: "Valorisation du bien",
+                  description: "Augmentation de la valeur de votre patrimoine immobilier grâce à une isolation optimale.",
+                },
+              ].map((item, index) => (
+                <motion.div
+                  key={item.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="bg-card rounded-lg p-8 shadow-card border border-border/50 text-center"
+                >
+                  <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-accent/10 mb-6">
+                    <item.icon className="h-6 w-6 text-accent" strokeWidth={1.5} />
+                  </div>
+                  <h3 className="font-serif text-xl mb-3 text-foreground">{item.title}</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{item.description}</p>
+                </motion.div>
+              ))}
             </div>
           </div>
         </section>
