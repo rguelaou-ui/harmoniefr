@@ -13,7 +13,6 @@ import MentionsLegalesPage from "./pages/MentionsLegalesPage";
 import PolitiqueConfidentialitePage from "./pages/PolitiqueConfidentialitePage";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
-import Navbar from "./components/Navbar";
 
 const queryClient = new QueryClient();
 
@@ -24,7 +23,6 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <ScrollToTop />
-        <Navbar />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/isolation-thermique-acoustique" element={<IsolationPage />} />
