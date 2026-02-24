@@ -65,13 +65,8 @@ const ProcessSection = () => {
               <div className="text-center">
                 {/* Step Number */}
                 <div className="relative inline-block mb-6">
-                  <span className="font-serif text-6xl md:text-7xl text-accent/20">
-                    {step.number}
-                  </span>
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-16 h-16 rounded-full bg-card shadow-card flex items-center justify-center border border-border/50">
-                      <step.icon className="h-7 w-7 text-accent" strokeWidth={1.5} />
-                    </div>
+                  <div className="w-16 h-16 rounded-full bg-card shadow-card flex items-center justify-center border border-border/50">
+                    <step.icon className="h-7 w-7 text-accent" strokeWidth={1.5} />
                   </div>
                 </div>
 
