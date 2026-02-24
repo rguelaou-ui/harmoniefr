@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -71,23 +72,36 @@ const QuoteForm = () => {
 
   const handleSubmit = async () => {
     setIsSubmitting(true);
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-    setIsSubmitting(false);
-    toast({
-      title: "Demande envoyée",
-      description: "Nous vous recontacterons dans les plus brefs délais.",
-    });
-    // Reset form
-    setStep(1);
-    setFormData({
-      projectType: "",
-      timeline: "",
-      lastName: "",
-      firstName: "",
-      email: "",
-      phone: "",
-    });
+    try {
+      const { data, error } = await supabase.functions.invoke('send-quote-email', {
+        body: formData,
+      });
+
+      if (error) throw error;
+
+      toast({
+        title: "Demande envoyée",
+        description: "Nous vous recontacterons dans les plus brefs délais.",
+      });
+      setStep(1);
+      setFormData({
+        projectType: "",
+        timeline: "",
+        lastName: "",
+        firstName: "",
+        email: "",
+        phone: "",
+      });
+    } catch (error) {
+      console.error('Error sending quote:', error);
+      toast({
+        title: "Erreur",
+        description: "Une erreur est survenue. Veuillez réessayer ou nous contacter par téléphone.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const stepVariants = {
