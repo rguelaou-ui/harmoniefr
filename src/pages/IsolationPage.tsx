@@ -210,6 +210,18 @@ const IsolationPage = () => {
                   },
                   {
                     step: "2",
+                    title: "Pose de laine haute densité 30 mm",
+                    description:
+                      "Une laine haute densité de 30 mm est posée dans l'ossature désolidarisée. Ce matériau compact offre une absorption acoustique remarquable malgré sa faible épaisseur.",
+                    points: [
+                      "Laine à haute densité spécialement conçue pour l'isolation phonique",
+                      "Épaisseur optimisée de 30 mm pour un encombrement minimal",
+                      "Absorption efficace des fréquences moyennes et aiguës",
+                      "Complément idéal à la désolidarisation de l'ossature",
+                    ],
+                  },
+                  {
+                    step: "3",
                     title: "Plaque Fermacell",
                     description:
                       "La plaque Fermacell est intégrée comme première couche de masse dans notre système. Ce matériau de haute densité apporte une contribution essentielle à la performance globale.",
@@ -221,7 +233,7 @@ const IsolationPage = () => {
                     ],
                   },
                   {
-                    step: "3",
+                    step: "4",
                     title: "Plaque phonique",
                     description:
                       "Une plaque phonique spécialement conçue pour l'isolation acoustique vient renforcer le complexe. Elle complète le dispositif en ajoutant une couche d'atténuation supplémentaire.",
@@ -232,7 +244,7 @@ const IsolationPage = () => {
                     ],
                   },
                   {
-                    step: "4",
+                    step: "5",
                     title: "Membrane acoustique Techsound",
                     description:
                       "La membrane Techsound est l'élément clé de notre système. Sa très haute densité en fait une masse lourde acoustique redoutablement efficace contre les bruits aériens.",
@@ -244,7 +256,7 @@ const IsolationPage = () => {
                     ],
                   },
                   {
-                    step: "5",
+                    step: "6",
                     title: "Plaque BA13 de finition",
                     description:
                       "La plaque de plâtre BA13 vient finaliser le complexe acoustique. Elle assure une finition esthétique irréprochable tout en protégeant l'ensemble du système.",
