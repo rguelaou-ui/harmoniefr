@@ -262,6 +262,161 @@ const IsolationPage = () => {
           </div>
         </section>
 
+        {/* Nos interventions */}
+        <section className="py-20 bg-secondary">
+          <div className="container mx-auto px-6">
+            <motion.div {...fadeIn} className="text-center mb-16">
+              <span className="text-accent font-medium text-sm tracking-[0.2em] uppercase mb-4 block">
+                Nos interventions
+              </span>
+              <h2 className="font-serif text-3xl md:text-4xl text-foreground mb-6">
+                Travaux d'isolation thermique et phonique par zone
+              </h2>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[
+                {
+                  icon: "🏠",
+                  title: "Isolation des murs",
+                  items: [
+                    "Isolation thermique par l'intérieur (ITI) : doublage collé ou sur ossature",
+                    "Isolation thermique par l'extérieur (ITE) : bardage ventilé ou enduit sur isolant",
+                    "Isolation phonique des murs mitoyens : système masse-ressort-masse",
+                    "Correction acoustique des parois intérieures",
+                  ],
+                },
+                {
+                  icon: "🔝",
+                  title: "Isolation des plafonds",
+                  items: [
+                    "Faux plafond acoustique suspendu sur suspentes anti-vibratiles",
+                    "Isolation thermique des combles perdus par soufflage",
+                    "Isolation thermique des rampants sous toiture",
+                    "Traitement des bruits d'impact du plancher supérieur",
+                  ],
+                },
+                {
+                  icon: "🏗️",
+                  title: "Isolation des sols",
+                  items: [
+                    "Chape flottante avec sous-couche acoustique",
+                    "Isolation thermique du plancher bas sur cave ou vide sanitaire",
+                    "Pose de parquet flottant avec sous-couche isolante phonique",
+                    "Désolidarisation périphérique pour éviter les ponts phoniques",
+                  ],
+                },
+                {
+                  icon: "🪟",
+                  title: "Fenêtres & ouvertures",
+                  items: [
+                    "Double vitrage acoustique asymétrique (ex: 10/16/4 mm)",
+                    "Triple vitrage pour isolation thermique renforcée",
+                    "Joints d'étanchéité acoustique sur cadres existants",
+                    "Volets roulants isolants thermiquement",
+                  ],
+                },
+                {
+                  icon: "🚪",
+                  title: "Portes & cloisons",
+                  items: [
+                    "Portes isophoniques (Rw ≥ 30 dB)",
+                    "Cloisons acoustiques sur ossature désolidarisée",
+                    "Cloisons amovibles phoniques pour bureaux",
+                    "Sas acoustique pour entrées bruyantes",
+                  ],
+                },
+                {
+                  icon: "🔧",
+                  title: "Gaines & équipements",
+                  items: [
+                    "Coffrage acoustique des VMC et conduits",
+                    "Isolation phonique des tuyauteries",
+                    "Traitement des ponts phoniques structurels",
+                    "Isolation thermique des gaines techniques",
+                  ],
+                },
+              ].map((zone, index) => (
+                <motion.div
+                  key={zone.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="bg-card rounded-lg p-6 shadow-card border border-border/50"
+                >
+                  <span className="text-3xl mb-4 block">{zone.icon}</span>
+                  <h3 className="font-serif text-lg text-foreground mb-4">{zone.title}</h3>
+                  <ul className="space-y-2">
+                    {zone.items.map((item) => (
+                      <li key={item} className="flex items-start gap-2 text-sm text-muted-foreground">
+                        <CheckCircle2 className="h-3.5 w-3.5 text-accent mt-0.5 flex-shrink-0" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ */}
+        <section className="py-20 bg-background">
+          <div className="container mx-auto px-6">
+            <div className="max-w-3xl mx-auto">
+              <motion.div {...fadeIn} className="text-center mb-12">
+                <span className="text-accent font-medium text-sm tracking-[0.2em] uppercase mb-4 block">
+                  Questions fréquentes
+                </span>
+                <h2 className="font-serif text-3xl md:text-4xl text-foreground mb-6">
+                  Tout savoir sur les travaux d'isolation thermique et phonique
+                </h2>
+              </motion.div>
+
+              <motion.div {...fadeIn}>
+                <Accordion type="single" collapsible className="space-y-3">
+                  {[
+                    {
+                      q: "Quelle est la différence entre isolation phonique et isolation acoustique ?",
+                      a: "L'isolation phonique et l'isolation acoustique sont souvent utilisées de manière interchangeable, mais il existe une nuance technique. L'isolation phonique désigne spécifiquement les travaux visant à empêcher la transmission du son entre deux espaces (murs, plafonds, sols). L'isolation acoustique est un terme plus large qui englobe à la fois l'isolation phonique (bloquer le son) et la correction acoustique (améliorer la qualité sonore à l'intérieur d'un espace en réduisant la réverbération). Chez Harmonie, nos travaux d'isolation acoustique couvrent ces deux aspects.",
+                    },
+                    {
+                      q: "Peut-on combiner isolation thermique et isolation phonique en un seul chantier ?",
+                      a: "Absolument, et c'est même recommandé ! De nombreux matériaux comme la laine de roche ou la ouate de cellulose offrent à la fois d'excellentes performances en isolation thermique et en isolation phonique. Combiner les travaux d'isolation thermique et les travaux d'isolation phonique permet de réduire les coûts de main-d'œuvre, de limiter la gêne liée au chantier et d'optimiser les performances globales du bâtiment.",
+                    },
+                    {
+                      q: "Quels sont les signes indiquant un besoin de travaux d'isolation thermique ?",
+                      a: "Plusieurs signes doivent vous alerter : factures de chauffage élevées, sensation de parois froides, courants d'air, humidité et condensation sur les murs, variations de température importantes entre les pièces. Un diagnostic thermique (DPE) permet de quantifier les déperditions et de prioriser les travaux d'isolation thermique les plus rentables.",
+                    },
+                    {
+                      q: "Combien de décibels peut-on gagner avec des travaux d'isolation phonique ?",
+                      a: "En fonction de la configuration et des solutions mises en œuvre, les travaux d'isolation phonique permettent de gagner entre 10 et 20 dB d'affaiblissement supplémentaire. Or, une réduction de 10 dB correspond à une division par 2 du bruit perçu. Un doublage acoustique mural performant (ossature désolidarisée + laine minérale + BA13) apporte environ 15 à 18 dB de gain.",
+                    },
+                    {
+                      q: "Quelles aides financières pour les travaux d'isolation thermique ?",
+                      a: "Les travaux d'isolation thermique sont éligibles à plusieurs dispositifs : MaPrimeRénov' (jusqu'à 75€/m² pour l'ITI), les CEE (primes énergie), la TVA réduite à 5,5%, l'éco-prêt à taux zéro (jusqu'à 50 000€), et les aides locales (région, département, commune). L'entreprise doit être certifiée RGE pour débloquer ces aides — c'est notre cas chez Harmonie.",
+                    },
+                    {
+                      q: "Quelle épaisseur d'isolant faut-il prévoir ?",
+                      a: "L'épaisseur dépend du matériau utilisé et de la résistance thermique R visée. Pour les murs (R=5), comptez environ 14 à 16 cm de laine de roche ou 10 cm de polyuréthane. Pour les combles (R=7), prévoyez 28 à 30 cm de laine soufflée. Pour l'isolation phonique, l'épaisseur minimale de laine dans une contre-cloison est de 4 à 5 cm, mais nous recommandons 7 à 10 cm pour une isolation acoustique optimale.",
+                    },
+                  ].map((faq, i) => (
+                    <AccordionItem key={i} value={`faq-${i}`} className="bg-card rounded-lg border border-border/50 px-6">
+                      <AccordionTrigger className="text-left font-medium text-foreground hover:no-underline">
+                        {faq.q}
+                      </AccordionTrigger>
+                      <AccordionContent className="text-muted-foreground leading-relaxed">
+                        {faq.a}
+                      </AccordionContent>
+                    </AccordionItem>
+                  ))}
+                </Accordion>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
         {/* Isolation Phonique / Acoustique - Section détaillée */}
         <section className="py-20 bg-secondary">
           <div className="container mx-auto px-6">
@@ -490,161 +645,6 @@ const IsolationPage = () => {
                     </div>
                   </div>
                 ))}
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
-        {/* Nos interventions */}
-        <section className="py-20 bg-secondary">
-          <div className="container mx-auto px-6">
-            <motion.div {...fadeIn} className="text-center mb-16">
-              <span className="text-accent font-medium text-sm tracking-[0.2em] uppercase mb-4 block">
-                Nos interventions
-              </span>
-              <h2 className="font-serif text-3xl md:text-4xl text-foreground mb-6">
-                Travaux d'isolation thermique et phonique par zone
-              </h2>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[
-                {
-                  icon: "🏠",
-                  title: "Isolation des murs",
-                  items: [
-                    "Isolation thermique par l'intérieur (ITI) : doublage collé ou sur ossature",
-                    "Isolation thermique par l'extérieur (ITE) : bardage ventilé ou enduit sur isolant",
-                    "Isolation phonique des murs mitoyens : système masse-ressort-masse",
-                    "Correction acoustique des parois intérieures",
-                  ],
-                },
-                {
-                  icon: "🔝",
-                  title: "Isolation des plafonds",
-                  items: [
-                    "Faux plafond acoustique suspendu sur suspentes anti-vibratiles",
-                    "Isolation thermique des combles perdus par soufflage",
-                    "Isolation thermique des rampants sous toiture",
-                    "Traitement des bruits d'impact du plancher supérieur",
-                  ],
-                },
-                {
-                  icon: "🏗️",
-                  title: "Isolation des sols",
-                  items: [
-                    "Chape flottante avec sous-couche acoustique",
-                    "Isolation thermique du plancher bas sur cave ou vide sanitaire",
-                    "Pose de parquet flottant avec sous-couche isolante phonique",
-                    "Désolidarisation périphérique pour éviter les ponts phoniques",
-                  ],
-                },
-                {
-                  icon: "🪟",
-                  title: "Fenêtres & ouvertures",
-                  items: [
-                    "Double vitrage acoustique asymétrique (ex: 10/16/4 mm)",
-                    "Triple vitrage pour isolation thermique renforcée",
-                    "Joints d'étanchéité acoustique sur cadres existants",
-                    "Volets roulants isolants thermiquement",
-                  ],
-                },
-                {
-                  icon: "🚪",
-                  title: "Portes & cloisons",
-                  items: [
-                    "Portes isophoniques (Rw ≥ 30 dB)",
-                    "Cloisons acoustiques sur ossature désolidarisée",
-                    "Cloisons amovibles phoniques pour bureaux",
-                    "Sas acoustique pour entrées bruyantes",
-                  ],
-                },
-                {
-                  icon: "🔧",
-                  title: "Gaines & équipements",
-                  items: [
-                    "Coffrage acoustique des VMC et conduits",
-                    "Isolation phonique des tuyauteries",
-                    "Traitement des ponts phoniques structurels",
-                    "Isolation thermique des gaines techniques",
-                  ],
-                },
-              ].map((zone, index) => (
-                <motion.div
-                  key={zone.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-card rounded-lg p-6 shadow-card border border-border/50"
-                >
-                  <span className="text-3xl mb-4 block">{zone.icon}</span>
-                  <h3 className="font-serif text-lg text-foreground mb-4">{zone.title}</h3>
-                  <ul className="space-y-2">
-                    {zone.items.map((item) => (
-                      <li key={item} className="flex items-start gap-2 text-sm text-muted-foreground">
-                        <CheckCircle2 className="h-3.5 w-3.5 text-accent mt-0.5 flex-shrink-0" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* FAQ */}
-        <section className="py-20 bg-background">
-          <div className="container mx-auto px-6">
-            <div className="max-w-3xl mx-auto">
-              <motion.div {...fadeIn} className="text-center mb-12">
-                <span className="text-accent font-medium text-sm tracking-[0.2em] uppercase mb-4 block">
-                  Questions fréquentes
-                </span>
-                <h2 className="font-serif text-3xl md:text-4xl text-foreground mb-6">
-                  Tout savoir sur les travaux d'isolation thermique et phonique
-                </h2>
-              </motion.div>
-
-              <motion.div {...fadeIn}>
-                <Accordion type="single" collapsible className="space-y-3">
-                  {[
-                    {
-                      q: "Quelle est la différence entre isolation phonique et isolation acoustique ?",
-                      a: "L'isolation phonique et l'isolation acoustique sont souvent utilisées de manière interchangeable, mais il existe une nuance technique. L'isolation phonique désigne spécifiquement les travaux visant à empêcher la transmission du son entre deux espaces (murs, plafonds, sols). L'isolation acoustique est un terme plus large qui englobe à la fois l'isolation phonique (bloquer le son) et la correction acoustique (améliorer la qualité sonore à l'intérieur d'un espace en réduisant la réverbération). Chez Harmonie, nos travaux d'isolation acoustique couvrent ces deux aspects.",
-                    },
-                    {
-                      q: "Peut-on combiner isolation thermique et isolation phonique en un seul chantier ?",
-                      a: "Absolument, et c'est même recommandé ! De nombreux matériaux comme la laine de roche ou la ouate de cellulose offrent à la fois d'excellentes performances en isolation thermique et en isolation phonique. Combiner les travaux d'isolation thermique et les travaux d'isolation phonique permet de réduire les coûts de main-d'œuvre, de limiter la gêne liée au chantier et d'optimiser les performances globales du bâtiment.",
-                    },
-                    {
-                      q: "Quels sont les signes indiquant un besoin de travaux d'isolation thermique ?",
-                      a: "Plusieurs signes doivent vous alerter : factures de chauffage élevées, sensation de parois froides, courants d'air, humidité et condensation sur les murs, variations de température importantes entre les pièces. Un diagnostic thermique (DPE) permet de quantifier les déperditions et de prioriser les travaux d'isolation thermique les plus rentables.",
-                    },
-                    {
-                      q: "Combien de décibels peut-on gagner avec des travaux d'isolation phonique ?",
-                      a: "En fonction de la configuration et des solutions mises en œuvre, les travaux d'isolation phonique permettent de gagner entre 10 et 20 dB d'affaiblissement supplémentaire. Or, une réduction de 10 dB correspond à une division par 2 du bruit perçu. Un doublage acoustique mural performant (ossature désolidarisée + laine minérale + BA13) apporte environ 15 à 18 dB de gain.",
-                    },
-                    {
-                      q: "Quelles aides financières pour les travaux d'isolation thermique ?",
-                      a: "Les travaux d'isolation thermique sont éligibles à plusieurs dispositifs : MaPrimeRénov' (jusqu'à 75€/m² pour l'ITI), les CEE (primes énergie), la TVA réduite à 5,5%, l'éco-prêt à taux zéro (jusqu'à 50 000€), et les aides locales (région, département, commune). L'entreprise doit être certifiée RGE pour débloquer ces aides — c'est notre cas chez Harmonie.",
-                    },
-                    {
-                      q: "Quelle épaisseur d'isolant faut-il prévoir ?",
-                      a: "L'épaisseur dépend du matériau utilisé et de la résistance thermique R visée. Pour les murs (R=5), comptez environ 14 à 16 cm de laine de roche ou 10 cm de polyuréthane. Pour les combles (R=7), prévoyez 28 à 30 cm de laine soufflée. Pour l'isolation phonique, l'épaisseur minimale de laine dans une contre-cloison est de 4 à 5 cm, mais nous recommandons 7 à 10 cm pour une isolation acoustique optimale.",
-                    },
-                  ].map((faq, i) => (
-                    <AccordionItem key={i} value={`faq-${i}`} className="bg-card rounded-lg border border-border/50 px-6">
-                      <AccordionTrigger className="text-left font-medium text-foreground hover:no-underline">
-                        {faq.q}
-                      </AccordionTrigger>
-                      <AccordionContent className="text-muted-foreground leading-relaxed">
-                        {faq.a}
-                      </AccordionContent>
-                    </AccordionItem>
-                  ))}
-                </Accordion>
               </motion.div>
             </div>
           </div>
