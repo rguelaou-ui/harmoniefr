@@ -21,7 +21,7 @@ const services = [
   {
     icon: Volume2,
     title: "Isolation Phonique",
-    description: "Protection efficace contre les nuisances sonores. Expertise en isolation acoustique des murs, plafonds et sols.",
+    description: "Travaux d'isolation phonique pour une protection efficace contre les nuisances sonores. Expertise en isolation acoustique des murs, plafonds et sols.",
     link: "/isolation-phonique",
     cta: "Découvrir l'isolation phonique",
   },
