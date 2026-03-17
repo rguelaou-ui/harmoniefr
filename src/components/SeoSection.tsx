@@ -24,11 +24,11 @@ const SeoSection = () => {
               et dans toute la région pour des prestations complètes : peinture, plomberie, électricité et isolation.
             </p>
             <p>
-              Nous proposons également des solutions d'{" "}
-              <Link to="/isolation-phonique" className="text-accent hover:underline">isolation phonique</Link>{" "}
-              pour améliorer le confort acoustique et d'{" "}
+              Nous proposons également des <strong>travaux d'isolation phonique</strong> pour améliorer le confort acoustique de votre logement et des solutions d'{" "}
               <Link to="/isolation-thermique-acoustique" className="text-accent hover:underline">isolation thermique</Link>{" "}
-              pour réduire vos factures d'énergie.
+              pour réduire vos factures d'énergie. Nos équipes réalisent vos{" "}
+              <Link to="/isolation-phonique" className="text-accent hover:underline">travaux d'isolation phonique</Link>{" "}
+              avec des matériaux haute performance pour un résultat durable.
             </p>
           </div>
         </div>
