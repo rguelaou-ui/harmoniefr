@@ -4,6 +4,7 @@ import ServicesGrid from "@/components/ServicesGrid";
 import ProcessSection from "@/components/ProcessSection";
 import PortfolioSection from "@/components/PortfolioSection";
 import QuoteForm from "@/components/QuoteForm";
+import SeoSection from "@/components/SeoSection";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -15,6 +16,7 @@ const Index = () => {
       <ProcessSection />
       <PortfolioSection />
       <QuoteForm />
+      <SeoSection />
       <Footer />
     </main>
   );
