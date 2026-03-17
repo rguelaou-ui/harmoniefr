@@ -43,7 +43,7 @@ const HeroSection = () => {
 
           {/* Main Title */}
           <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-primary-foreground leading-tight mb-6">
-            Harmonie, la maîtrise complète de vos travaux,{" "}
+            Isolation phonique 93 &amp; rénovation en Île-de-France{" "}
             <span className="block mt-2">
               l'exigence d'une{" "}
               <span className="text-accent">finition irréprochable</span>.
