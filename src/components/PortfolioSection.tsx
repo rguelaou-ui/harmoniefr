@@ -47,8 +47,8 @@ const PortfolioSection = () => {
             </h2>
           </div>
           <p className="text-muted-foreground max-w-md text-lg">
-            Découvrez une sélection de projets qui témoignent de notre exigence 
-            et de notre attention aux détails.
+            Découvrez une sélection de projets — rénovation, travaux d'isolation phonique et aménagement —
+            qui témoignent de notre exigence et de notre attention aux détails.
           </p>
         </motion.div>
 

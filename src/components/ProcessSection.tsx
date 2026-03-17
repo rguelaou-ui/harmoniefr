@@ -18,7 +18,7 @@ const steps = [
     number: "03",
     icon: CheckCircle2,
     title: "Livraison & Garanties",
-    description: "Réception de votre projet dans les délais convenus. Vos travaux sont couverts par nos garanties décennale et biennale.",
+    description: "Réception de votre projet dans les délais convenus. Vos travaux de rénovation et d'isolation phonique sont couverts par nos garanties décennale et biennale.",
   },
 ];
 

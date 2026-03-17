@@ -57,8 +57,8 @@ const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-lg md:text-xl text-primary-foreground/80 max-w-2xl mx-auto mb-10 font-light leading-relaxed"
           >
-            Rénovation complète, aménagement sur mesure et confort technique : 
-            Harmonie orchestre tous vos travaux d'intérieur.
+            Rénovation complète, travaux d'isolation phonique, aménagement sur mesure et confort technique : 
+            Harmonie orchestre tous vos travaux d'intérieur en Île-de-France.
           </motion.p>
 
           {/* CTA Buttons */}
