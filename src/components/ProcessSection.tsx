@@ -6,7 +6,7 @@ const steps = [
     number: "01",
     icon: ClipboardList,
     title: "Étude & Devis Précis",
-    description: "Nous analysons vos besoins et vos envies lors d'un rendez-vous personnalisé. Vous recevez un devis détaillé, transparent et sans engagement.",
+    description: "Nous analysons vos besoins lors d'un rendez-vous personnalisé : rénovation, travaux d'isolation phonique ou thermique. Vous recevez un devis détaillé, transparent et sans engagement.",
   },
   {
     number: "02",
