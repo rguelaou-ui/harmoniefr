@@ -17,6 +17,11 @@ import PrixIsolationPhonique from "./pages/blog/PrixIsolationPhonique";
 import CommentIsolerMurBruit from "./pages/blog/CommentIsolerMurBruit";
 import PrixRenovationParis from "./pages/blog/PrixRenovationParis";
 import CombienCouteRenovation from "./pages/blog/CombienCouteRenovation";
+import IsolationPhoniqueParisPage from "./pages/IsolationPhoniqueParisPage";
+import IsolationAcoustiqueParisPage from "./pages/IsolationAcoustiqueParisPage";
+import EntrepriseIsolationPhoniquePage from "./pages/EntrepriseIsolationPhoniquePage";
+import IsolationAntiBruitPage from "./pages/IsolationAntiBruitPage";
+import CapitonnagePorteAntiBruitPage from "./pages/CapitonnagePorteAntiBruitPage";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
 import { cityRoutes } from "./data/cities";
@@ -40,6 +45,12 @@ const App = () => (
           <Route path="/menuiserie-finitions" element={<MenuiserieFinitionsPage />} />
           <Route path="/mentions-legales" element={<MentionsLegalesPage />} />
           <Route path="/politique-de-confidentialite" element={<PolitiqueConfidentialitePage />} />
+          {/* Pages SEO dédiées isolation */}
+          <Route path="/isolation-phonique-paris" element={<IsolationPhoniqueParisPage />} />
+          <Route path="/isolation-acoustique-paris" element={<IsolationAcoustiqueParisPage />} />
+          <Route path="/entreprise-isolation-phonique" element={<EntrepriseIsolationPhoniquePage />} />
+          <Route path="/isolation-anti-bruit" element={<IsolationAntiBruitPage />} />
+          <Route path="/capitonnage-porte-anti-bruit" element={<CapitonnagePorteAntiBruitPage />} />
           {/* Blog */}
           <Route path="/blog" element={<BlogIndex />} />
           <Route path="/blog/prix-isolation-phonique-appartement" element={<PrixIsolationPhonique />} />
