@@ -427,7 +427,7 @@ const IsolationPhoniquePage = () => {
                     },
                     {
                       q: "Quel est le prix de l'isolation phonique d'un appartement ?",
-                      a: "Le prix dépend de la surface, du type de bruit à traiter et de la solution retenue. Comptez en moyenne 50 à 150€/m² pour une isolation phonique des murs, 60 à 180€/m² pour un plafond acoustique, et 40 à 120€/m² pour un sol. Harmonie réalise un devis gratuit et personnalisé.",
+                      a: "Le prix dépend de la surface, du type de bruit à traiter et de la solution retenue. Comptez entre 170 et 220 €/m² pour une isolation phonique des murs, et environ 220 €/m² pour un plafond acoustique. Harmonie réalise un devis gratuit et personnalisé.",
                     },
                     {
                       q: "Comment isoler un mur du bruit des voisins ?",

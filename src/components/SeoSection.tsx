@@ -79,7 +79,7 @@ const SeoSection = () => {
               {[
                 {
                   q: "Combien coûte une isolation phonique à Paris ?",
-                  a: "Le prix d'une isolation phonique à Paris varie de 50 à 150 €/m² selon la technique : doublage acoustique mur (80-120 €/m²), faux plafond acoustique (70-130 €/m²), chape flottante (60-100 €/m²). Harmonie BTP propose un devis gratuit et détaillé sous 24h.",
+                  a: "Le prix d'une isolation phonique à Paris se situe entre 170 et 220 €/m² pour un mur, et environ 220 €/m² pour un plafond acoustique. Ces tarifs incluent fourniture et pose de matériaux haute performance. Harmonie BTP propose un devis gratuit et détaillé sous 24h.",
                 },
                 {
                   q: "Quelle est la meilleure entreprise d'isolation phonique en Île-de-France ?",
