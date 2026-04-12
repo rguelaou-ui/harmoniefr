@@ -53,8 +53,8 @@ const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-lg md:text-xl text-primary-foreground/80 max-w-2xl mx-auto mb-10 font-light leading-relaxed"
           >
-            Rénovation complète, travaux d'isolation phonique, aménagement sur mesure et confort technique : 
-            Harmonie orchestre tous vos travaux d'intérieur en Île-de-France.
+            Entreprise spécialisée en isolation phonique et acoustique à Paris. 
+            Travaux d'isolation anti bruit, rénovation d'appartement et capitonnage porte. Devis gratuit en 24h.
           </motion.p>
 
           {/* CTA Buttons */}
